@@ -17,8 +17,6 @@ export default async function Home({ searchParams }: HomeProps) {
   const { articles, nextCursor } = await fetchNews({ category });
   const categories = await getCategories();
 
-  console.log('initialArticles',articles)
-
   return (
     <div>
       <Head>

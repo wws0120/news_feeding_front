@@ -26,7 +26,6 @@ export async function getNews(
     let query: string;
     let values: any[];
     const fetchLimit = limit + 1;
-    console.log('getnews',cursor,categoryId)
     if (cursor) {
       const [cursorDate, cursorId] = cursor.split('_');
       if (categoryId) {
