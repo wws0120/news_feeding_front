@@ -1,8 +1,8 @@
-export const getRelativeTime = (dateString: string): string => {
-    const date = new Date(dateString.toString().replace(' ', 'T')).getTime();  
+export const getRelativeTime = (dateValue:Date) => {
+    const date = dateValue.getTime();  
     const now = new Date().getTime(); 
     const differenceInSeconds = (now - date) / 1000;
-
+console.log('data',date)
     if (differenceInSeconds < 60) {
         return `${Math.floor(differenceInSeconds)} 秒前`;
     } else if (differenceInSeconds < 60 * 60) {
