@@ -1,6 +1,6 @@
 export const getRelativeTime = (dateValue:Date) => {
     console.log('dateValue',dateValue)
-    const dateUTC = new Date(dateValue.toUTCString()).getTime();
+    const dateUTC = dateValue.getTime();
     const nowUTC = new Date().getTime();
     const differenceInSeconds = (nowUTC - dateUTC) / 1000;
 console.log('data',dateUTC)
