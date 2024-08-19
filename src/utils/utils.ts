@@ -2,7 +2,7 @@ export const getRelativeTime = (dateValue:Date) => {
     console.log('dateValue',dateValue)
     const dateUTC = new Date(dateValue.toISOString()).getTime();
     const nowUTC = new Date().getTime();
-    const differenceInSeconds = (nowUTC - dateUTC) / 1000;
+    const differenceInSeconds = ((nowUTC - dateUTC)+ 28800) / 1000 ; 
 console.log('data',dateUTC)
 console.log('now',nowUTC)
     if (differenceInSeconds < 60) {
